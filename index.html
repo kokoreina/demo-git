@@ -1,29 +1,190 @@
-"<!DOCTYPE html>
-<html lang=""en"">
-
+<html lang="en">
 <head>
-    <meta charset=""UTF-8"">
-    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
-    <title>Document</title>
-
-    <link href=""https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"" rel=""stylesheet""
-        integrity=""sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"" crossorigin=""anonymous"">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
 </head>
-
 <body>
-    <nav class=""navbar bg-body-tertiary"">
-        <div class=""container-fluid"">
-            <a class=""navbar-brand"">Navbar</a>
-            <form class=""d-flex"" role=""search"">
-                <input class=""form-control me-2"" type=""search"" placeholder=""Search"" aria-label=""Search"">
-                <button class=""btn btn-outline-success"" type=""submit"">Search</button>
-            </form>
-        </div>
-    </nav>
+    <h1>hello world</h1>
+    
+    <script>
+        // tương tác với file html
+        // output
+        console.log("hello world")
+        console.log("Nguyễn Tấn Huy")
+        //console.log :câu lệnh in ra mà hình ở tab console
+        /**
+         * comment nhiều dòng
+        */
+       //! khai báo biến (variable)
+       console.log("Nguyễn Tấn Huy")
+       console.log("Nguyễn Tấn Huy")
+       console.log("Nguyễn Tấn Huy")
+       //cú pháp khai báo biến syntanx
+       var fullname;// khai báo một biến có tên là full name
+       console.log(fullname)//??undefined
 
-    <script src=""https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js""
-        integrity=""sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz""
-        crossorigin=""anonymous""></script>
+       fullname ="Nguyễn Tấn Huy"// gán giá trị cho biến full name 
+    
+       console.log(fullname)
+       // vừa khai báo biến vừa gán giá trị
+       var name ='BBBBBB'//khai báo biến name và gán giá trị khởi tạo cho nó là bbbbbb
+       console.log(name)
+       //** kiểu dử liệu (type) : giá trị của kiểu dữ liệu(value)
+       // string :" abcdef kiểu string",'nguyễn văn c'
+       // number
+       // boolean
+
+       //@#** quy ước khi đặt tên biến
+       // camelcase: sử dụng nhiều nhất trong js
+       // snack_case: full_name
+       // IN_HOA: MOT_NAM_CO_BAO_NHIEU_THANG :biến hằng số, không bao giờ thay đổi,..
+
+       //--------------------------
+       //--- kiểu dữ liệu number
+       var age = 30  //tạo biến có kiểu dữ liệu là number
+       console.log("2",age)
+
+       // qua năm sau tăng lên 1 tuổi
+       age = 31
+       console.log(age)
+       var n= 156
+       var hundred=Math.floor(n/100)
+       var ten=Math.floor( n%100/10)
+       var unit= n%10
+       var sum =hundred+ten+unit
+       console.log("tong cua 3 chu so la ....",sum)
+
+       var x=10;
+       var b=20;
+       var y=x+b;
+       console.log("y=x+b...", y)
+       y=x-b;
+       console.log("y=x-b..." ,y)
+       y=x*b;
+       console.log("y=x*b...", y)
+       y=x/b
+       console.log("y=x/b...", y)
+
+       var z=0.1
+
+       console.log("5%3....",5%3)
+       console.log("5%4....",5%4)
+       console.log("5%5....",5%5)
+
+       var a=3
+       var b=4
+       var canhhuyen;
+       //sử dụng công thức :
+       canhhuyen= Math.sqrt(Math.pow(a,2)+Math.pow(b,2))
+       console.log("chieu dai canh huyen la ...",canhhuyen)
+       //---math.floor(làm tròn xuống)
+       //---math.ceil(làm tròn lnee)
+       //---math.round(làm tròn tới con số gần nhất)
+       //---math.round(3.54)->4
+       //---math.round(3.45)->3
+
+
+       //case study
+       var tenphim= "quat mo trung ma"
+       console.log("ten phim la :..",tenphim)
+       var giavenguoilon= 100
+       console.log("gia ve nguoi lon la :...",giavenguoilon,"K")
+       var giavetreem= 50
+       console.log("gia ve tre em...",giavetreem,"K")
+       var phantramtientuthien="10%"
+       console.log("phan tram tien tu thien la...",phantramtientuthien)
+       var sovenguoilon=10
+       console.log("so ve nguoi lon duoc ban la...",sovenguoilon)
+       var sovetreem=5
+       console.log("so ve tre em duoc ban la...",sovetreem)
+       var tongdoanhthu=giavenguoilon*sovenguoilon+giavetreem*sovetreem
+       console.log("tong doanh thu la,...",tongdoanhthu)
+       var tientuthien=tongdoanhthu/100*10
+       console.log("tien tu thien la,...",tientuthien)
+       var tienconlai=tongdoanhthu-tientuthien
+       console.log("tien con lai la...",tienconlai)
+       var tongve=sovenguoilon+sovetreem
+       console.log("tong ve ban duoc la...",tongve)
+
+       //tính tiền lương nhân viên
+       var luong1ngay=100
+       var songaylam=30
+       var tienluong=luong1ngay*songaylam
+       console.log("tien luong la,..",tienluong)
+       //tính giá trị trung bình
+       var a=10
+       var b= 45
+       var c=67
+       var d=96
+       var e=78
+       var giatritrungbinh=(a+b+c+d+e)/5
+       console.log("gia tri trung binh la,...",giatritrungbinh)
+       //quy đổi tiền
+       var usd=23.500
+       var sotienusdnhapvao=10
+       var quydoivnd=usd*sotienusdnhapvao
+       console.log("so tien sau khi quy doi la,...",quydoivnd)
+       //tính diện tích chu vi hình chư nhât 
+       var chieudai=8
+       var chieurong=10
+       var dientich=chieudai*chieurong
+       var chuvi=(chieudai+chieurong)*2
+       console.log("dien tich hinh chu nhat la",dientich)
+       console.log("chu vi hinh chu nhat la",chuvi)
+       //tính tổng 2 ký số
+       var nhapvao_n_co_2chuso=13
+       var donvi=13%10
+       var hangchuc=Math.floor(13/10)
+       var tongchuso=donvi+hangchuc
+       console.log("tong chu so la...",tongchuso)
+       //xếp loại sinh viên theo yêu cầu
+       var toan=7
+       var ly=6
+       var hoa=5
+       var dtb=(toan+ly+hoa)/3
+       if(dtb>9){
+        console.log("xep loai xuat sac")
+       }
+       if(dtb>=8 && dtb<9){
+        console.log("xep loai gioi")
+       }
+       if(dtb>=7&&dtb<8){
+        console.log("xep loai kha")
+       }
+       if(dtb>=6&&dtb<7){
+        console.log("xep loai tb kha")
+       }
+       if(dtb>=5&&dtb<6){
+        console.log("xep loai tb ")
+       }
+       if(dtb<5){
+        console.log("xep loai tb kha")
+       }
+       //--------------
+       //* nối chỗi 
+       var aa="hello   "
+       var bb="world"
+       var helloworld=aa+bb
+       console.log(helloworld)
+
+       //----------
+       //****
+       // kiểm tra kiểu dữ liệu : typeof
+       console.log(typeof 3);
+       console.log(typeof "3")
+       console.log(typeof Number("3"))
+       var strnum="3"
+       var num =Number(strnum)
+       var strnum2= string(num)
+       //---gán giá trị của biến cho biến
+       var age2=age
+
+    
+    
+
+
+ 
+    </script>
 </body>
-
-</html>"																									
+</html>
